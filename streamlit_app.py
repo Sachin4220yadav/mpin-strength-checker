@@ -3,7 +3,7 @@ from mpin_checker import check_pin_strength
 
 st.set_page_config(page_title="MPIN Strength Checker", layout="centered")
 
-st.title("🔐 MPIN Strength Checker")
+st.title(" MPIN Strength Checker")
 st.write("Evaluate the strength of your 4 or 6-digit MPIN based on common patterns and personal data.")
 
 # Input Fields
@@ -23,9 +23,9 @@ if st.button("Check Strength"):
         strength, reasons = check_pin_strength(mpin, dob_self, dob_spouse, anniversary)
 
         if strength == "STRONG":
-            st.success("✅ MPIN is STRONG")
+            st.success(" MPIN is STRONG")
         else:
-            st.error("❌ MPIN is WEAK")
+            st.error(" MPIN is WEAK")
             st.write("**Reasons:**")
             for reason in reasons:
                 st.markdown(f"- {reason}")
